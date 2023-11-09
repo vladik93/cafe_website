@@ -1,0 +1,421 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #333;
+  font-family: "Inter", sans-serif;
+}
+
+/* REUSABLE --------------------------- */
+.section {
+  background-color: #f7efe7;
+}
+
+.section:nth-child(even) {
+  background-color: #fff;
+}
+
+.list {
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+  color: #333;
+  display: inline;
+}
+
+.img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.icon {
+  width: 2.4rem;
+  height: 2.4rem;
+}
+
+.icon-lg {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.heading--primary {
+  font-size: 6.4rem;
+  letter-spacing: -0.2rem;
+}
+
+.heading--secondary {
+  font-size: 3.6rem;
+  font-weight: 500;
+}
+
+.heading--tertiary {
+  font-size: 2rem;
+}
+
+.description {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  font-weight: 300;
+}
+
+.grid {
+  display: grid;
+}
+
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.btn {
+  padding: 1.6rem 6.4rem;
+  border-radius: 5px;
+  border: none;
+}
+
+.btn--primary {
+  background: #333;
+  color: #fff;
+}
+
+/* ------------------------------------ */
+
+.header {
+  display: flex;
+  background-color: #fff;
+  align-items: center;
+  padding: 3.2rem 4rem;
+  justify-content: space-between;
+}
+
+.nav-menu ul {
+  display: flex;
+  gap: 3.2rem;
+}
+
+.header-social {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.social-icon {
+  width: 3.2rem;
+  height: 3.2rem;
+}
+
+.header-col {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+}
+
+.header-burger button {
+  background: none;
+  border: none;
+}
+
+/* HERO SECTION ------------------------------ */
+.hero-video {
+  width: 100%;
+  height: auto;
+}
+
+/* ------------------------------------------- */
+
+/* ABOUT US SECTION ---------------------------- */
+.about-us-section {
+  padding: 6.4rem 0;
+}
+
+.about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  max-width: 50%;
+  margin: 0 auto;
+}
+
+.about-us-heading {
+  margin-bottom: 0.8rem;
+}
+
+.about-us-tagline {
+  margin-bottom: 6.4rem;
+  font-weight: 500;
+  font-size: 2rem;
+  color: #555;
+}
+
+.about-us-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3.2rem;
+}
+
+/* ---------------------------------------------- */
+
+/* MENUS SECTION -------------------------------- */
+.menus-section {
+  padding: 6.4rem 0;
+}
+
+.menus {
+  gap: 3.2rem;
+}
+
+.menu-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+  gap: 1.6rem;
+  /* padding: 3.2rem 6.4rem; */
+  z-index: 5;
+}
+
+/* .menu-item::before {
+  content: "";
+  position: absolute;
+  display: block;
+  z-index: -3;
+  top: -1.6rem;
+  left: -0.8rem;
+  width: 60%;
+  padding: 3.2rem;
+} */
+
+.menu-item-img {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.menu-item-img img {
+  display: block;
+  object-position: center center;
+  transition: transform 0.3s;
+}
+
+/* .menu-item-img img:hover {
+  transform: scale(1.2);
+} */
+
+/* .menu-category-btn {
+} */
+
+.menu-category-link:hover {
+  color: #dcdc;
+}
+/* ---------------------------------------------- */
+
+/* SERVICE SECTION -------------------------------------- */
+.service-section {
+  padding: 6.4rem 0;
+}
+
+.service {
+  grid-template-columns: 1.3fr 1.2fr;
+  align-items: center;
+  gap: 3.2rem;
+}
+
+.service-text {
+  max-width: 65%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-heading {
+  margin-bottom: 0.8rem;
+}
+
+.service-description {
+  margin-bottom: 6.4rem;
+}
+
+.service-video video {
+  width: 100%;
+}
+/* -------------------------------------------------------- */
+
+/* GIFT CARD SECTION ---------------------------------- */
+.gift-card-section {
+  padding: 6.4rem 0;
+}
+
+.gift-card {
+  display: flex;
+  gap: 2.4rem;
+}
+
+.gift-card img {
+  max-height: 350px;
+  /* width: 100%; */
+  flex: 3;
+}
+
+.gift-card button {
+  flex: 1;
+  background-image: url("assets/images/card_button_img.jpg");
+  background-position: center;
+  border: none;
+  color: #fff;
+  position: relative;
+  font-size: 1.6rem;
+}
+
+.gift-card button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+}
+
+.gift-card button::after {
+  content: "GIFT CARD";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 5;
+  padding: 1.6rem;
+  border: 5px double #fff;
+}
+
+/* --------------------------------------------------- */
+
+/* OPENING HOURS SECTION -------------------------------- */
+.opening-hours-section {
+  padding: 6.4rem 0;
+  background-color: #fff;
+}
+
+.opening-hours {
+  gap: 6.4rem;
+}
+
+.opening-hours-text {
+  max-width: 80%;
+  /* justify-content: end; */
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+  font-size: 1.8rem;
+}
+
+.opening-hours-heading {
+  margin-bottom: 0.8rem;
+}
+
+.opening-hours-list {
+  margin-bottom: 3.2rem;
+  font-weight: 300;
+}
+
+.opening-hours-list:last-of-type {
+  display: flex;
+  gap: 0.8rem;
+}
+
+.opening-hours-img {
+  margin-top: 3.2rem;
+}
+
+.opening-hours-changing-img {
+  max-width: 65%;
+}
+
+/* ------------------------------------------------- */
+
+/* CAROUSEL SECTION ------------------------------------------------- */
+.carousel-section {
+  padding: 6.4rem 0;
+  background-color: #f7efe7 !important;
+}
+
+.carousel {
+  display: flex;
+  padding: 0 6.4rem;
+  flex-direction: column;
+}
+
+.carousel-controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.carousel-control-btn {
+  border: none;
+  background: none;
+}
+
+.carousel-control-btn img {
+  width: 7.4rem;
+}
+
+/* ---------------------------------------------------------------------- */
+/* /* Footer ----------------------------------------------------  */
+
+.footer-container {
+  background-color: #eee;
+  border-top: 5px double #333;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: center;
+  gap: 1.6rem;
+  padding: 3.2rem 0 7.2rem 0;
+}
+
+.footer-logo {
+  transform: scale(0.8);
+}
+
+.footer-bottom {
+  color: #fff;
+  background-color: #333;
+  width: 100%;
+  padding: 1.6rem 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+.footer-bottom span {
+  font-size: 2rem;
+  color: pink;
+  font-weight: 500;
+}
+
+/* -----------------------------------------------------------/ */

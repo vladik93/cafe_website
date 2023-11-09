@@ -1,0 +1,79 @@
+/* Max: 1200px */
+
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+.menus {
+  padding: 3.2rem;
+}
+
+/* MAX: 1024px */
+
+@media (max-width: 64em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* MAX: 768px */
+
+@media (max-width: 48em) {
+  html {
+    font-size: 43.75%;
+  }
+
+  .menus {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 6.4rem;
+    padding: 3.2rem;
+  }
+
+  .menu-item {
+    flex: 1fr;
+  }
+
+  .menu-item:not(:last-child) {
+    grid-column: 2 span;
+  }
+
+  .menu-item:last-child {
+    grid-column: 2/4;
+  }
+}
+
+/* MAX: 480px */
+
+@media (max-width: 30em) {
+  .menus {
+    place-items: start;
+  }
+
+  .menu-item:last-child {
+    grid-column: 1/5;
+  }
+
+  .header {
+    display: none;
+  }
+
+  .footer {
+    display: none;
+  }
+
+  .gift-card button {
+    display: none;
+  }
+
+  .service {
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
+
+  .service-text {
+    max-width: 100%;
+  }
+}
